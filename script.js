@@ -7,6 +7,12 @@ toggle.addEventListener("click", () => {
 const userInput = document.getElementById("user-input");
 const convertBtn = document.getElementById("conversion-btn");
 
+userInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    convertBtn.click(); // Simulates a button click
+  }
+});
+
 convertBtn.addEventListener("click", function () {
   const input = parseFloat(userInput.value);
   if (isNaN(input)) {
