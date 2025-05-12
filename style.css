@@ -66,7 +66,6 @@ body {
 #converter-ui {
   border-radius: 0.3em;
   box-shadow: 0px 0px 5px rgb(0, 0, 0);
-  height: 100%;
 }
 
 /* main-section styling starts here */
@@ -133,7 +132,7 @@ input[type="number"] {
 #main-section button:hover {
   transform: scale(1.1);
   background-color: rgba(178, 149, 255, 1);
-  box-shadow: 0px 4px 12px rgba(178, 149, 255, 0.5);
+  /* box-shadow: 0px 4px 12px rgba(178, 149, 255, 0.5);*/
 }
 #main-section button:active {
   transform: scale(0.95);
@@ -213,7 +212,6 @@ body.dark #converter-ui {
 @media screen and (max-width: 600px) {
   #converter-ui {
     width: 95vw;
-    height: 90vh;
     font-size: large;
   }
   .group {
