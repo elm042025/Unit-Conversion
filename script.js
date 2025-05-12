@@ -17,6 +17,8 @@ convertBtn.addEventListener("click", function () {
   const lengthOutput = document.getElementById("length-output");
   const volumeOutput = document.getElementById("volume-output");
   const massOutput = document.getElementById("mass-output");
+  const tempOutput = document.getElementById("temp-output");
+  const speedOutput = document.getElementById("speed-output");
 
   lengthOutput.textContent = `${input} meters = ${(input * 3.28084).toFixed(
     2
@@ -29,4 +31,11 @@ convertBtn.addEventListener("click", function () {
   massOutput.textContent = `${input} kilos = ${(input * 2.20462).toFixed(
     2
   )} pounds | ${input} pounds = ${(input / 2.20462).toFixed(2)} kilos`;
+  tempOutput.textContent = `${input}°C = ${((input * 9) / 5 + 32).toFixed(
+    2
+  )}°F | ${input}°F = ${(((input - 32) * 5) / 9).toFixed(2)}°C`;
+
+  speedOutput.textContent = `${input} km/h = ${(input * 0.621371).toFixed(
+    2
+  )} mph | ${input} mph = ${(input / 0.621371).toFixed(2)} km/h`;
 });
