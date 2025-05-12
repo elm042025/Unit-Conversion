@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+  font-size: 100%;
+}
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Pill-shaped button */
+#theme-toggle {
+  margin-bottom: 1rem;
+  width: 4rem;
+  height: 2rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 62.5rem;
+  cursor: pointer;
+  padding: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider that moves left/right */
+.slider {
+  background-color: #000000;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transform: translateX(0);
+}
+#theme-toggle:hover {
+  border: solid 0.063rem rgba(228, 137, 0, 0.511);
+}
+
+/* Both icons exist, but only one is shown at a time */
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* converter-ui styling starts here */
+
+#converter-ui {
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+/* main-section styling starts here */
+
+#main-section {
+  border-radius: 0.3rem 0.3rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: rgba(105, 67, 255, 1);
+}
+#main-section h1 {
+  font-size: 1rem;
+  font-weight: light;
+  color: white;
+  margin-bottom: 1rem;
+}
+#main-section input {
+  width: 4rem;
+  height: 2.5rem;
+  border: 0.1rem solid rgba(178, 149, 255, 1);
+  border-radius: 0.2em;
+  background-color: rgba(105, 67, 255, 1);
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+#main-section input:focus {
+  outline: none;
+  border: 0.1rem solid rgba(178, 149, 255, 1);
+  box-shadow: 0px 0px 5px rgba(178, 149, 255, 1);
+}
+/* To remove the spinner arrows (on the right side of the number input el */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#main-section button {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.1rem;
+  text-align: center;
+  font-size: small;
+  border-radius: 0.2rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* main-section styling ends here */
+#groups {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.group {
+  width: 85%;
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0.5rem;
+}
+.group h2 {
+  color: rgba(90, 83, 123, 1);
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+}
+.group p {
+  color: rgba(53, 53, 53, 1);
+  font-size: small;
+}
+
+/*! Dark mode class starts here*/
+body.dark {
+  background-color: #161616;
+}
+body.dark #theme-toggle {
+  background-color: #444;
+}
+.sun-icon {
+  opacity: 0;
+}
+
+body.dark .sun-icon {
+  opacity: 1;
+}
+
+body.dark .moon-icon {
+  opacity: 0;
+}
+body.dark .slider {
+  transform: translateX(2rem);
+  background-color: #ffffff;
+}
+body.dark #converter-ui {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+body.dark #groups {
+  background-color: rgba(31, 41, 55, 1);
+}
+body.dark .group {
+  background-color: rgba(39, 53, 73, 1);
+}
+body.dark h2 {
+  color: rgba(204, 193, 255, 1);
+}
+body.dark p {
+  color: rgba(255, 255, 255, 1);
+}
