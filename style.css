@@ -23,6 +23,11 @@ body {
   text-align: center;
   padding: 1rem;
 }
+#ui-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* This moves the button to the right */
+}
 
 /* Pill-shaped button */
 #theme-toggle {
