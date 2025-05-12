@@ -95,6 +95,7 @@ body {
   align-items: center;
   padding: 1rem 3rem;
   background-color: rgba(105, 67, 255, 1);
+  border-radius: 0.3rem;
 }
 #main-section h1 {
   font-size: 1rem;
@@ -252,5 +253,5 @@ body.dark #converter-ui {
   }
   input {
     font-size: 1.25rem;
- 
+  }
 }
