@@ -232,12 +232,13 @@ body.dark p {
 body.dark #converter-ui {
   background-color: rgba(31, 41, 55, 1);
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   html {
     font-size: 90%; /* ✅ Slightly reduce font size on small screens */
   }
   #converter-ui {
     width: 100vw; /* ✅ Fill screen width */
+    height: 100vh;
     font-size: 1rem;
   }
   .group {
@@ -251,9 +252,5 @@ body.dark #converter-ui {
   }
   input {
     font-size: 1.25rem;
-  }
-  #ui-wrapper {
-    position: fixed;
-    height: 100vh;
-  }
+ 
 }
